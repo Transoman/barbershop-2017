@@ -93,9 +93,9 @@
 		<section class="advantages">
 
 			<div class="advantages__wrapper slider">
-				<input type="radio" class="advantages__input" name="advantages" id="advantages-input-1" checked>
-				<input type="radio" class="advantages__input" name="advantages" id="advantages-input-2">
-				<input type="radio" class="advantages__input" name="advantages" id="advantages-input-3">
+				<input type="radio" class="slider__input" name="advantages" id="advantages-input-1" checked>
+				<input type="radio" class="slider__input" name="advantages" id="advantages-input-2">
+				<input type="radio" class="slider__input" name="advantages" id="advantages-input-3">
 
 				<ul class="advantages__list">
 					<li class="advantages__item">
@@ -140,6 +140,54 @@
 				</ul>
 
 				<a href="#" class="news__to-all btn">Показать все</a>
+			</div>
+
+		</section>
+
+		<section class="reviews">
+
+			<div class="reviews__wrapper slider">
+				<h2 class="reviews__title">Отзывы о нас</h2>
+				<a href="#" class="reviews__write btn">Оставить свой</a>
+
+				<input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked>
+				<input type="radio" class="slider__input" name="reviews" id="reviews-input-2">
+				<input type="radio" class="slider__input" name="reviews" id="reviews-input-3">
+			
+				<div class="reviews__list">
+					<blockquote class="reviews__item slider__item">
+						<div class="reviews__author-photo">
+							<img src="" width="50" height="33" alt="Фото Трэвиса Баркера">
+						</div>
+						<cite class="reviews__author-name">Трэвис Баркер</cite>
+						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+					</blockquote>
+
+					<blockquote class="reviews__item slider__item">
+						<div class="reviews__author-photo">
+							<img src="" width="50" height="33" alt="Фото Трэвиса Баркера">
+						</div>
+						<cite class="reviews__author-name">Трэвис Баркер</cite>
+						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+					</blockquote>
+
+					<blockquote class="reviews__item slider__item">
+						<div class="reviews__author-photo">
+							<img src="" width="50" height="33" alt="Фото Трэвиса Баркера">
+						</div>
+						<cite class="reviews__author-name">Трэвис Баркер</cite>
+						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+					</blockquote>
+
+					<button class="reviews__prev" type="button">Предыдущий отзыв</button>
+					<button class="reviews__next" type="button">Следую отзыв</button>
+				</div>
+
+				<div class="advantages__toggles slider__toggles">
+					<label for="reviews-input-1" class="reviews__toggle">1</label>
+					<label for="reviews-input-2" class="reviews__toggle">2</label>
+					<label for="reviews-input-3" class="reviews__toggle">3</label>
+				</div>
 			</div>
 
 		</section>
