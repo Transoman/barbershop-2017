@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
 sass = require('gulp-sass'),
-spritesmith = require('gulp.spritesmith'),
 concat = require('gulp-concat'),
 browserSync = require('browser-sync').create();
 
@@ -10,7 +9,7 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: './'
 		},
-		tunnel: 'pink',
+		tunnel: 'barbershop',
 		notify: false
 	});
 });
@@ -25,8 +24,8 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'libs/jquery/jquery-3.2.1.min.js',
-		'libs/owlcarousel/dist/owl.carousel.min.js'
+		// 'libs/jquery/jquery-3.2.1.min.js',
+		// 'libs/owlcarousel/dist/owl.carousel.min.js'
 		])
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest('js'))
