@@ -1,0 +1,105 @@
+.stats
+	+container
+	text-align: center
+
+	&__header
+		padding: 27px 38px
+		color: #000
+		background: #fff
+	
+	&__slogan
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+
+	&__intro
+		font-size: 20px
+		margin-bottom: 0
+
+	&__legend
+		font-size: 20px
+		text-align: center
+		opacity: .3
+		&--top
+			display: none
+
+	&__list
+		width: 100%
+		border-collapse: collapse
+		margin-bottom: 15px
+		tr:nth-child(1)
+			background: #404040
+		tr:nth-child(2)
+			background: #4e4e4e
+		tr:nth-child(3)
+			background: #353535
+		tr:nth-child(4)
+			background: #404040
+
+	&__value
+		padding: 20px
+		font-size: 40px
+		font-weight: 700
+		text-align: left
+		sup
+			font-size: 25px
+
+	&__field
+		padding: 20px
+		text-align: right
+
+
+@media #{$tablet}
+	.stats
+		position: relative
+		margin-top: -184px
+		z-index: 1
+
+		&__header
+			+clearfix
+			// padding: 0
+			padding-top: 31px
+			padding-bottom: 24px
+			text-align: left
+		&__slogan
+			float: left
+			margin-right: 100px
+			margin-bottom: 20px
+			font-size: 40px
+			line-height: 40px
+			text-transform: none
+
+		&__intro
+			float: left
+			width: 210px
+			margin: 0
+
+		&__legend--top
+			display: block
+			float: none
+			clear: both
+			text-align: left
+
+		&__list
+			+clearfix
+			display: block
+			tr
+				float: left
+				width: 50%
+
+
+@media #{$desc}
+	.stats
+		+clearfix
+		margin-top: -159px
+
+		&__header
+			float: left
+			width: 320px
+			padding-left: 40px
+			padding-right: 40px
+
+		&__list
+			float: right
+			display: block
+			width: 640px
