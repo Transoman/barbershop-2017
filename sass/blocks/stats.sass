@@ -51,16 +51,28 @@
 
 @media #{$tablet}
 	.stats
+		background-color: #353535
 		position: relative
 		margin-top: -184px
 		z-index: 1
 
 		&__header
 			+clearfix
-			// padding: 0
+			position: relative
 			padding-top: 31px
 			padding-bottom: 24px
 			text-align: left
+			&::before
+				content: ''
+				position: absolute
+				left: -22px
+				top: 40px
+				height: 0
+				width: 0
+				border-top: 22px solid #fff
+				border-left: 22px solid transparent
+				border-right: 22px solid #fff
+
 		&__slogan
 			float: left
 			margin-right: 100px
@@ -80,13 +92,29 @@
 			clear: both
 			text-align: left
 
+		&__legend--bottom
+			display: none
+
 		&__list
 			+clearfix
 			display: block
+			margin-bottom: 0
 			tr
 				float: left
 				width: 50%
 
+		&__value
+			display: block
+			font-size: 72px
+			padding: 45px 35px 10px
+			sup
+				font-size: 34px
+				top: -.8em
+		
+		&__field
+			display: block
+			text-align: left
+			padding-left: 35px
 
 @media #{$desc}
 	.stats
@@ -97,7 +125,15 @@
 			float: left
 			width: 320px
 			padding-left: 40px
-			padding-right: 40px
+			padding-right: 66px
+
+		&__slogan
+			float: 
+			margin: 0
+			margin-bottom: 45px
+
+		&__intro
+			margin-bottom: 35px
 
 		&__list
 			float: right
