@@ -19,7 +19,12 @@
 		<header class="page-header">
 
 			<div class="page-header__logo">
-				<img src="img/logo-mobile.png" alt="Барбершоп Бородинский">
+				<picture>
+					<source srcset="img/logo-mobile.png" media="(max-width: 767px)">
+					<source srcset="img/logo-tablet.png" media="(max-width: 1200px)">
+					<source srcset="img/logo-desc.png">
+					<img src="img/logo-mobile.png" alt="Барбершоп Бородинский">
+				</picture>
 			</div>
 
 			<nav class="main-nav main-nav--closed main-nav--nojs">
@@ -49,7 +54,7 @@
 
 					<ul class="main-nav__user-list">
 						<li class="main-nav__user-item">
-							<a href="#" class="main-nav__user-login" title="Войти"><i class="ic-login"></i>Вход</a>
+							<a href="#" class="main-nav__user-login" title="Войти">Вход</a>
 						</li>
 					</ul>
 
@@ -102,20 +107,20 @@
 
 				<ul class="advantages__list">
 					<li class="advantages__item">
-						<h3 class="advantages__item-tile">БЫСТРО</h3>
+						<h3 class="advantages__item-title">БЫСТРО</h3>
 						<p>Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки</p>
 					</li>
 					<li class="advantages__item">
-						<h3 class="advantages__item-tile">КРУТО</h3>
+						<h3 class="advantages__item-title">КРУТО</h3>
 						<p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
 					</li>
 					<li class="advantages__item">
-						<h3 class="advantages__item-tile">ДОРОГО</h3>
+						<h3 class="advantages__item-title">ДОРОГО</h3>
 						<p>Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
 					</li>
 				</ul>
 				<div class="advantages__toggles slider__toggles">
-					<label for="advantages-input-1" class="advantages__toggle">1</label>
+					<label for="advantages-input-1" class="advantages__toggle advantages__toggle--active">1</label>
 					<label for="advantages-input-2" class="advantages__toggle">2</label>
 					<label for="advantages-input-3" class="advantages__toggle">3</label>
 				</div>
