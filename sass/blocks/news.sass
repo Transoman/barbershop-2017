@@ -1,0 +1,112 @@
+.news
+	background-color: #f8f5f2
+	color: #000
+	&__wrapper
+		position: relative
+		+container
+		padding-top: 67px
+		padding-bottom: 28px
+
+	&__title
+		margin: 0
+		margin-bottom: 30px
+		font-size: 30px
+		font-weight: 700
+		text-align: center
+		text-transform: uppercase
+
+	&__list
+		margin: 0
+		padding: 0
+		list-style-type: none
+
+	&__item
+		position: relative
+		margin: 0 20px
+		margin-bottom: 16px
+		padding-bottom: 18px
+		padding-left: 70px
+		&:nth-child(n+3)
+			display: none
+		&:nth-child(2)
+			margin-bottom: 0
+		p
+			margin: 0
+
+	&__date
+		position: absolute
+		top: 12px
+		left: 0
+		display: block
+		width: 50px
+		height: 50px
+		padding: 5px 10px
+		background-color: #000
+		font-size: 16px
+		color: #fff
+		text-align: center
+		b
+			font-size: 30px
+			font-weight: 700
+		span
+			display: block
+			margin-top: -11px
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -10px
+			height: 0
+			width: 0
+			border-top: 10px solid #000
+			border-left: 25px solid transparent
+			border-right: 25px solid transparent
+	
+	&__to-all
+		padding: 10px 0
+		border: 1px solid #e5ddd5
+
+@media #{$tablet}
+	.news
+		padding-top: 90px
+		padding-bottom: 28px
+
+		&__wrapper
+			padding: 0
+		
+		&__list
+			font-size: 0
+
+		&__item
+			display: inline-block
+			vertical-align: top
+			width: 320px
+			margin: 0
+			padding: 0 30px
+			padding-left: 70px
+			font-size: 18px
+		
+		&__title
+			margin-right: 200px
+			margin-bottom: 55px
+			font-size: 40px
+			text-align: left
+
+		&__to-all
+			position: absolute
+			top: 0
+			right: 0
+			width: 160px
+
+
+@media #{$desc}
+	.news
+		padding-top: 88px
+		padding-bottom: 32px
+
+		&__title
+			margin-left: 70px
+
+		&__item
+			&:nth-child(n+3)
+				display: inline-block
