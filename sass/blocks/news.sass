@@ -33,6 +33,25 @@
 		p
 			margin: 0
 
+	&__link
+		text-decoration: none
+		color: #000
+		transition: all .25s ease
+		&:hover
+			color: $accent
+			text-decoration: underline
+			.news__date
+				background: $accent
+				&::after
+					border-top-color: $accent
+		&:active
+			color: #6a4d38
+			.news__date
+				background: #6a4d38
+				color: #978374
+				&::after
+					border-top-color: #6a4d38
+
 	&__date
 		position: absolute
 		top: 12px
@@ -45,6 +64,7 @@
 		font-size: 16px
 		color: #fff
 		text-align: center
+		transition: all .25s ease
 		b
 			font-size: 30px
 			font-weight: 700
@@ -61,10 +81,16 @@
 			border-top: 10px solid #000
 			border-left: 25px solid transparent
 			border-right: 25px solid transparent
+			transition: all .25s ease
 	
 	&__to-all
 		padding: 10px 0
 		border: 1px solid #e5ddd5
+		&:hover
+			border-color: #d5c9bd
+		&:active
+			background: #d5c9bd
+			color: #a1988f
 
 @media #{$tablet}
 	.news
