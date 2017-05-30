@@ -1,0 +1,180 @@
+.reviews
+	padding: 25px 0 30px
+	background: #f8f5f2
+	border-top: 1px solid #e5ddd5
+	color: #000
+
+	&__wrapper
+		position: relative
+		+container
+
+	&__title
+		margin: 0
+		margin-bottom: 30px
+		font-size: 30px
+		text-transform: uppercase
+		text-align: center
+
+	&__write
+		display: none
+
+	&__item
+		position: relative
+		margin: 0 20px
+		p
+			padding-left: 70px
+			margin: 0
+			margin-bottom: 30px
+		&:nth-child(n+2)
+			display: none
+
+	&__author-photo
+		position: absolute
+		left: 0
+		width: 50px
+		height: 50px
+
+	&__author-name
+		display: block
+		padding-left: 70px
+		margin-bottom: 20px
+		font-size: 24px
+		font-weight: 700
+		font-style: normal
+
+	&__prev, &__next
+		display: none
+
+	&__toggles
+		text-align: center
+
+	&__toggle
+		display: inline-block
+		vertical-align: top
+		margin-right: 23px
+		width: 6px
+		height: 6px
+		border: 1px solid #000
+		font-size: 0
+		transform: rotate(45deg)
+		&:last-child
+			margin-right: 0
+		&--active
+			background-color: #000
+
+
+@media #{$tablet}
+	.reviews
+		padding: 40px 0 50px
+		
+		&__title
+			margin-bottom: 40px
+			font-size: 40px
+			text-align: left
+
+		&__write
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 160px
+			padding: 10px 0
+			border: 1px solid #e5ddd5
+			&:hover
+				border-color: #d5c9bd
+			&:active
+				background: #d5c9bd
+				color: #a1988f
+
+		&__list
+			position: relative
+			padding: 0px 49px
+		
+		&__item
+			position: relative
+			margin: 0
+			padding: 30px
+			padding-left: 0
+			border: 1px solid #e5ddd5
+			p
+				margin: 0
+				padding-left: 140px
+
+		&__author-photo
+			left: 30px
+			height: 80px
+			width: 80px
+			border-radius: 50%
+			overflow: hidden
+
+		&__author-name
+			padding-left: 140px
+
+		&__prev, &__next
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 50px
+			background: none
+			border: 0
+			font-size: 0
+			outline: none
+			cursor: pointer
+			&:hover
+				border-color: #d5c9bd
+			&:active
+				background-color: #d5c9bd
+
+		&__prev
+			left: 0
+			border: 1px solid #e5ddd5
+			background: url(../img/left-arrow.png) no-repeat center center
+
+		&__next
+			right: 0
+			border: 1px solid #e5ddd5
+			background: url(../img/right-arrow.png) no-repeat center center
+
+		&__toggles
+			position: relative
+			left: 50%
+			top: -4px
+			display: inline-block
+			padding: 0px 20px 0
+			background: #f8f5f2
+			transform: translateX(-50%)
+
+
+@media #{$desc}
+	.reviews
+		padding-bottom: 20px
+		&__title
+			padding-left: 70px
+			margin-bottom: 45px
+
+		&__list
+			padding: 0 70px
+
+		&__item
+			padding-right: 75px
+			padding-bottom: 29px
+			p
+				padding-left: 320px 
+
+		&__author-photo
+			left: 0
+			top: 0
+			width: auto
+			height: auto
+			border-radius: 0
+
+		&__author-name
+			padding-left: 320px
+
+		&__toggles
+			position: static
+			display: block
+			transform: translateX(0)
+			padding: 0
+			margin-top: 40px
