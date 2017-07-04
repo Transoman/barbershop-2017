@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+
+		<title>Записаться | Барбершоп "Бородинський"</title>
+
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="libs/html5shiv/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="page-header">
+
+			<h1 class="visually-hidden">Барбершоп "Бородинський" - истинно мужская классика</h1>
+
+			<div class="page-header__logo">
+				<picture>
+					<source srcset="img/logo-desc.png" media="(min-width: 1200px)">
+					<source srcset="img/logo-tablet.png" media="(min-width: 768px)">
+					<img src="img/logo-mobile.svg" width="226" height="30" alt="Барбершоп Бородинский">
+				</picture>
+			</div>
+
+			<nav class="main-nav main-nav--closed main-nav--nojs">
+				<button class="main-nav__toggle" type="button">Открыть меню</button>
+				<div class="main-nav__wrapper">
+					<ul class="main-nav__list">
+						<li class="main-nav__item">
+							<a href="/">Главная</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="works.html">Наши работы</a>
+						</li>
+						<li class="main-nav__item main-nav__item--active">
+							<a>Записаться</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="#">Контакты</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="#">HTML Academy</a>
+						</li>
+					</ul>
+
+					<ul class="main-nav__user-list">
+						<li class="main-nav__user-item">
+							<a href="#" class="main-nav__user-login" title="Войти">Вход</a>
+						</li>
+					</ul>
+
+				</div>
+			</nav>
+
+		</header>
+
+		<section class="order">
+			<div class="order__wrapper">
+
+				<h2 class="order__title">Запись на стрижку</h2>
+				<a href="/" class="btn order__link">На главную</a>
+
+				<form action="#" class="order-form" method="post">
+					<div class="order-form__row order-form__row-name">
+						<input type="text" name="lastname" class="order-form__input order-form__input--name" placeholder="Фамилия">
+						<input type="text" name="name" class="order-form__input order-form__input--name" placeholder="Имя">
+						<input type="text" name="surname" class="order-form__input order-form__input--name" placeholder="Отчество">
+					</div>
+
+					<div class="order-form__row order-form__row-contact">
+						<input type="tel" name="phone" class="order-form__input order-form__input--contact" placeholder="Контактный телефон">
+						<input type="email" name="email" class="order-form__input order-form__input--contact" placeholder="Контактный e-mail">
+					</div>
+
+					<textarea name="description" class="order-form__description" placeholder="Доп. информация для мастера"></textarea>
+
+					<fieldset>
+						<legend class="order-form__legend">Выберите модель бороды:</legend>
+
+						<ul class="order-form__model-list">
+							<li class="order-form__model-item">
+								<input type="radio" name="model-beard" id="admiral" class="order-form__radio" checked>
+								<label for="admiral" class="order-form__model-label">адмирал</label>
+								<img src="img/beard-1.svg" alt="адмирал">
+							</li>
+							<li class="order-form__model-item">
+								<input type="radio" name="model-beard" id="woodman" class="order-form__radio">
+								<label for="woodman" class="order-form__model-label">лесоруб</label>
+								<img src="img/beard-2.svg" alt="лесоруб">
+							</li>
+							<li class="order-form__model-item">
+								<input type="radio" name="model-beard" id="polar" class="order-form__radio">
+								<label for="polar" class="order-form__model-label">полярник</label>
+								<img src="img/beard-3.svg" alt="полярник">
+							</li>
+							<li class="order-form__model-item">
+								<input type="radio" name="model-beard" id="boyar" class="order-form__radio">
+								<label for="boyar" class="order-form__model-label">боярин</label>
+								<img src="img/beard-4.svg" alt="боярин">
+							</li>
+							<li class="order-form__model-item">
+								<input type="radio" name="model-beard" id="sage" class="order-form__radio">
+								<label for="sage" class="order-form__model-label">мудрец</label>
+								<img src="img/beard-5.svg" alt="мудрец">
+							</li>
+						</ul>
+
+					</fieldset>
+
+					<fieldset>
+						<legend class="order-form__legend">Дополнительные услуги:</legend>
+
+						<ul class="order-form__additional-list">
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="tinted-beard" class="order-form__checkbox" checked>
+								<label for="tinted-beard" class="order-form__additional-label">Подкрасить бороду</label>
+							</li>
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="screw-mustache" class="order-form__checkbox" checked>
+								<label for="screw-mustache" class="order-form__additional-label">Накрутить усы</label>
+							</li>
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="combing-my-beard" class="order-form__checkbox">
+								<label for="combing-my-beard" class="order-form__additional-label">Причесать бороду</label>
+							</li>
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="straighten-whiskey" class="order-form__checkbox">
+								<label for="straighten-whiskey" class="order-form__additional-label">Подровнять виски</label>
+							</li>
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="remove-gray-hair" class="order-form__checkbox">
+								<label for="remove-gray-hair" class="order-form__additional-label">Убрать седину</label>
+							</li>
+							<li class="order-form__additional-item">
+								<input type="checkbox" name="additional" id="polish-bald" class="order-form__checkbox">
+								<label for="polish-bald" class="order-form__additional-label">Отполировать лысину</label>
+							</li>
+						</ul>
+
+					</fieldset>
+
+					<button type="submit" class="btn btn-form">Отправить заявку</button>
+				</form>
+
+			</div>
+		</section>
+
+		<footer class="page-footer">
+
+			<div class="page-footer__wrapper">
+				<p class="page-footer__contacts">
+					<b>Барбершоп Бородинский</b><br>
+					г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <br>
+					<a href="+78125556666"><span class="page-footer__contacts--hidden">Тел.: </span>+7 (812) 555-66-66</a>
+				</p>
+
+				<p class="page-footer__social">
+					<span class="page-footer__social--hidden">Давайте дружить!</span>
+					<span class="social-links">
+						<a href="#" class="social-link social-link--vk">Мы в Вконтакте</a>
+						<a href="#" class="social-link social-link--fb">Мы в Фейсбуке</a>
+						<a href="#" class="social-link social-link--in">Мы в Истаграме</a>
+					</span>
+				</p>
+
+				<p class="page-footer__copyright">
+					Разработано:
+					<a href="#" class="btn page-footer__copyright-link">HTML Academy</a>
+				</p>
+			</div>
+
+		</footer>
+
+		<div class="modal-login">
+			<b class="modal-login__title">ЛИЧНЫЙ КАБИНЕТ</b>
+			<p>Введите свой логин и пароль, чтобы войти</p>
+
+			<form action="#" class="modal-login-form" method="post">
+				<input type="text" name="login" class="modal-login-form__input modal-login-form__input--login" placeholder="Логин">
+				<input type="password" name="pass" class="modal-login-form__input modal-login-form__input--password" placeholder="Пароль">
+
+				<div class="modal-login-form__row">
+					<input type="checkbox" name="remember" id="remember" class="modal-login-form__checkbox">
+					<label for="remember" class="modal-login-form__label">Запомните меня</label>
+
+					<a href="#" class="modal-login-form__link">Я забыл пароль!</a>
+				</div>
+
+				<div class="modal-login-form__btns">
+					<button type="submit" class="btn btn__login">Войти<span class="btn__cabinet"> в личный кабинет</span></button>
+					<button type="button" class="btn btn__close"> Закрыть</button>
+				</div>
+
+			</form>
+		</div>
+
+		<script src="js/common.js"></script>
+	</body>
+</html>

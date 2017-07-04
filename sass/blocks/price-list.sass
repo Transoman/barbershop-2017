@@ -1,0 +1,91 @@
+.price-list
+	padding: 30px 20px
+
+	&__wrapper
+		+container-fluid
+
+	&__title
+		margin: 0
+		margin-bottom: 25px
+		font-size: 30px
+		font-weight: 700
+		text-align: center
+		text-transform: uppercase
+
+	&__table
+		display: block
+		border-collapse: collapse
+		tbody
+			display: block
+		tr
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-bottom: 15px
+		td
+			display: block
+			padding: 0 5px
+		
+		.col-1
+			display: none
+		.col-2
+			padding-left: 0
+			font-weight: 700
+		.col-3
+			width: 100%
+			order: 4
+			padding-left: 0
+		.col-4
+			padding-right: 0
+		
+
+@media #{$tablet}
+	.price-list
+		padding: 40px 0 55px
+
+		&__title
+			text-align: left
+			font-size: 40px
+
+		&__table
+			display: table
+			width: 100%
+			font-size: 20px
+			tbody
+				display: table-row-group
+			tr
+				display: table-row
+			td
+				display: table-cell
+				padding: 12px 19px
+				vertical-align: top
+				border: 1px solid  #4a4a4a		
+			.col-1
+				display: table-cell
+				width: 70px
+				padding-left: 0
+				padding-right: 0
+				text-align: center
+				color: #727272
+			.col-2
+				padding: 12px 19px
+			.col-3
+				width: auto
+				padding: 12px 19px
+			.col-4
+				padding: 12px 19px
+				min-width: 160px
+
+		&__bracket
+			display: none
+
+
+@media #{$desc}
+	.price-list
+		&__section
+			display: flex
+			justify-content: space-between
+
+		&__table
+			width: 640px
+

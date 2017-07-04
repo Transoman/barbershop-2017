@@ -1,0 +1,257 @@
+.works
+	padding: 30px 0 60px
+	background-color: $bg-white
+	&__wrapper
+		+container-fluid
+		position: relative
+
+	&__title
+		margin: 0
+		margin-bottom: 30px
+		font-size: 30px
+		font-weight: 700
+		color: #000
+		text-transform: uppercase
+		text-align: center
+
+	&__link
+		display: none
+
+	&__item
+		margin: 0 20px 20px
+
+	&__item--work-month
+		position: relative
+		&::before
+			content: 'Работа месяца'
+			position: absolute
+			top: 401px
+			left: 0
+			padding: 0 17px 0 25px
+			height: 50px
+			font-size: 20px
+			font-weight: 700
+			line-height: 50px
+			text-transform: uppercase
+			background-color: $accent
+		&::after
+			content: ''
+			position: absolute
+			height: 0
+			width: 0
+			top: 401px
+			left: 164px
+			border-right: 8px solid transparent
+			border-top: 25px solid $accent
+			border-bottom: 25px solid $accent
+
+	&__img-wrapper
+		text-align: center
+		background-color: $light-gray
+
+	&__img
+		display: block
+		margin: 0 auto
+
+	&__content
+		padding: 20px
+		padding-bottom: 0
+		border: 1px solid $light-gray
+		border-top: 0
+		color: #000
+
+	&__blockquote
+		margin: 0
+		margin-bottom: 15px
+
+	&__author-name
+		// display: block
+		margin: 0
+		margin-bottom: 20px
+		font-size: 24px
+		font-weight: 700
+		font-style: normal
+
+	&__services-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		text-transform: uppercase
+		font-size: 0
+
+	&__services-item
+		display: inline-block
+		vertical-align: top
+		margin-right: 29px
+		margin-bottom: 20px
+		font-size: 16px
+		&:last-child
+			margin-right: 0
+
+	&__time
+		position: relative
+		margin-top: 25px
+		border: 1px solid $gray
+		padding: 30px 10px
+		padding-left: 110px
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 20px
+			width: 57px
+			height: 57px
+			transform: translateY(-50%)
+			background: url(../img/clock.svg) no-repeat center / contain
+
+
+.ic-scissors
+	margin-right: 15px
+	margin-top: 3px
+	width: 21px
+	height: 20px
+	background: url(../img/scissors-icon.svg) no-repeat
+
+.ic-beard
+	margin-right: 20px
+	margin-top: 3px
+	width: 23px
+	height: 21px
+	background: url(../img/beard-icon.svg) no-repeat
+
+.ic-mustache
+	margin-right: 20px
+	margin-top: 8px
+	width: 45px
+	height: 12px
+	background: url(../img/mustache-icon.svg) no-repeat
+
+
+@media #{$tablet}
+	.works
+		padding: 55px 0 100px
+		
+		&__title
+			width: 430px
+			margin-bottom: 55px
+			font-size: 40px
+			text-align: left
+
+		&__link
+			display: inline-block
+			width: 160px
+			padding: 10px 0
+			position: absolute
+			top: 0
+			right: 0
+			border: 1px solid $light-gray
+
+		&__item
+			display: flex
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			border: 1px solid $light-gray
+
+		&__img-wrapper
+			min-width: 270px
+
+		&__content
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			position: relative
+			width: 100%
+			padding: 45px 50px 20px
+			border: 0
+
+		&__author-name
+			margin-bottom: 30px
+
+		&__time
+			margin-top: 10px
+			padding: 40px 0
+			background-position: 27px
+			font-size: 30px
+			font-weight: 700
+			padding-left: 185px
+			text-align: center
+			text-transform: uppercase
+			&::before
+				left: 27px
+				width: 72px
+				height: 72px
+
+		&__item--work-month
+			&::before, &::after
+				top: 35px
+
+@media #{$desc}
+	.works
+		&__title
+			margin-bottom: 90px
+
+		&__list
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+
+		&__item
+			position: relative
+			flex-direction: column
+			width: 30.52%
+			margin-right: 40px
+			font-size: 18px
+			&:first-child
+				flex-direction: row
+				width: 100%
+				margin-right: 0
+				.works__author-img
+					max-width: 480px
+				.works__content
+					width: auto
+					padding: 125px 111px 15px 40px
+				.works__content-description
+					max-width: 300px
+			&:nth-child(n+2)
+				.works__content
+					width: auto
+			&:last-child
+				margin-right: 0
+
+		&__author-img
+			position: static
+			width: 100%
+
+		&__content
+			flex-grow: 1
+			padding: 30px 35px 15px
+		
+		&__time
+			width: 270px
+			height: auto
+			font-size: 20px
+			font-weight: 400
+			margin: 0
+			padding: 10px 50px
+			padding-top: 190px
+			text-transform: none
+			&::before
+				top: 25px
+				left: 50%
+				width: 140px
+				height: 140px
+				transform: translateY(0) translateX(-50%)
+
+		&__item--work-month
+			&::before
+				right: 0
+				left: auto
+				padding-left: 18px
+			&::after
+				right: 158px
+				left: auto
+				border-left: 8px solid transparent
+				border-right: 0
+				border-top: 25px solid $accent
+				border-bottom: 25px solid $accent

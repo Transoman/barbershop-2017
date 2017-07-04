@@ -6,7 +6,7 @@
 
 	&__wrapper
 		position: relative
-		+container
+		+container-fluid
 
 	&__title
 		margin: 0
@@ -20,6 +20,7 @@
 
 	&__item
 		position: relative
+		display: none
 		margin: 0 20px
 		p
 			padding-left: 70px
@@ -31,8 +32,10 @@
 	&__author-photo
 		position: absolute
 		left: 0
-		width: 50px
-		height: 50px
+		top: 0
+		img
+			width: 50px
+			height: 50px
 
 	&__author-name
 		display: block
@@ -59,8 +62,16 @@
 		transform: rotate(45deg)
 		&:last-child
 			margin-right: 0
-		&--active
-			background-color: #000
+
+#reviews-input-1:checked ~ .reviews__list .reviews__item:nth-child(1),
+#reviews-input-2:checked ~ .reviews__list .reviews__item:nth-child(2),
+#reviews-input-3:checked ~ .reviews__list .reviews__item:nth-child(3)
+	display: block
+		
+#reviews-input-1:checked ~ .slider__toggles label[for="reviews-input-1"],
+#reviews-input-2:checked ~ .slider__toggles label[for="reviews-input-2"],
+#reviews-input-3:checked ~ .slider__toggles label[for="reviews-input-3"]
+	background-color: #000
 
 
 @media #{$tablet}
@@ -102,13 +113,24 @@
 
 		&__author-photo
 			left: 30px
-			height: 80px
-			width: 80px
-			border-radius: 50%
+			top: 39px
 			overflow: hidden
+			img
+				border-radius: 50%
+				height: 80px
+				width: 80px
 
 		&__author-name
 			padding-left: 140px
+
+		&__toggles
+			position: relative
+			left: 50%
+			top: -4px
+			display: inline-block
+			padding: 0px 20px 0
+			background: #f8f5f2
+			transform: translateX(-50%)
 
 		&__prev, &__next
 			display: block
@@ -136,15 +158,6 @@
 			border: 1px solid #e5ddd5
 			background: url(../img/right-arrow.png) no-repeat center center
 
-		&__toggles
-			position: relative
-			left: 50%
-			top: -4px
-			display: inline-block
-			padding: 0px 20px 0
-			background: #f8f5f2
-			transform: translateX(-50%)
-
 
 @media #{$desc}
 	.reviews
@@ -165,9 +178,10 @@
 		&__author-photo
 			left: 0
 			top: 0
-			width: auto
-			height: auto
-			border-radius: 0
+			img
+				width: auto
+				height: auto
+				border-radius: 0
 
 		&__author-name
 			padding-left: 320px

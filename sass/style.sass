@@ -1,6 +1,5 @@
 @import 'variable'
 @import 'normalize'
-@import 'libs'
 
 *,
 *:before,
@@ -30,16 +29,20 @@
 @mixin container
 	width: 320px
 	margin: 0 auto
-	@media (min-width: 768px)
+	@media #{$tablet}
 		width: 640px
-	@media (min-width: 1200px)
+	@media #{$desc}
 		width: 960px
 
-
-html, body
-	height: 100%
+@mixin container-fluid
+	width: auto
+	@media #{$tablet}
+		width: 84%
+		max-width: 960px
+		margin: 0 auto
 
 body
+	position: relative
 	margin: 0
 	padding: 0
 	height: 100%
@@ -48,12 +51,16 @@ body
 	font-size: 18px
 	line-height: 27px
 	font-weight: normal
-	background-color: $bg-dark
+	background-color: #242424
 	color: #f7f4f1
 
 img
 	max-width: 100%
 	height: auto
+
+i[class^='ic-']
+	display: inline-block
+	vertical-align: top
 
 /* Buttons */
 .btn
@@ -66,9 +73,22 @@ img
 	text-transform: uppercase
 	text-decoration: none
 
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+/* Slider */
+.slider
+	overflow: hidden
+
 .slider__input
 	display: none
-
 
 // IMPORT FILES
 @import 'blocks/header'
@@ -76,3 +96,8 @@ img
 @import 'blocks/advantages'
 @import 'blocks/news'
 @import 'blocks/reviews'
+@import 'blocks/works'
+@import 'blocks/price-list'
+@import 'blocks/order'
+@import 'blocks/footer'
+@import 'blocks/modal'

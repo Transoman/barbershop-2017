@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,8 +8,8 @@
 
 		<title>Барбершоп "Бородинський"</title>
 
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
 		
 		<!--[if lt IE 9]>
 			<script src="libs/html5shiv/html5shiv.js"></script>
@@ -18,31 +18,28 @@
 	<body>
 		<header class="page-header">
 
+			<h1 class="visually-hidden">Барбершоп "Бородинський" - истинно мужская классика</h1>
+
 			<div class="page-header__logo">
 				<picture>
-					<source srcset="img/logo-mobile.png" media="(max-width: 767px)">
-					<source srcset="img/logo-tablet.png" media="(max-width: 1200px)">
-					<source srcset="img/logo-desc.png">
-					<img src="img/logo-mobile.png" alt="Барбершоп Бородинский">
+					<source srcset="img/logo-desc.png" media="(min-width: 1200px)">
+					<source srcset="img/logo-tablet.png" media="(min-width: 768px)">
+					<img src="img/logo-mobile.svg" width="226" height="30" alt="Барбершоп Бородинский">
 				</picture>
 			</div>
 
 			<nav class="main-nav main-nav--closed main-nav--nojs">
-				<button class="main-nav__toggle hamburger hamburger--collapse" type="button">
-					<span class="hamburger-box">
-    				<span class="hamburger-inner"></span>
-					</span>
-				</button>
+				<button class="main-nav__toggle" type="button">Открыть меню</button>
 				<div class="main-nav__wrapper">
 					<ul class="main-nav__list">
 						<li class="main-nav__item main-nav__item--active">
 							<a>Главная</a>
 						</li>
 						<li class="main-nav__item">
-							<a href="#">Наши роботы</a>
+							<a href="works.html">Наши работы</a>
 						</li>
 						<li class="main-nav__item">
-							<a href="#">Записаться</a>
+							<a href="order.html">Записаться</a>
 						</li>
 						<li class="main-nav__item">
 							<a href="#">Контакты</a>
@@ -66,35 +63,36 @@
 		<section class="stats">
 
 			<header class="stats__header">
+				<h2 class="stats__title visually-hidden">Статистика Барбершопа</h2>
 				<b class="stats__slogan">Стрижка у нас<br> это выгодно!</b>
 				<p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
-				<small class="stats__legend stats__legend--top"><sup>*</sup> - приведённые данные ложь</small>
+				<small class="stats__legend stats__legend--top"><sup>*</sup> —  приведённые данные ложь</small>
 			</header>
 
 			<table class="stats__list">
 
 				<tr>
 					<td class="stats__value">1 500 <sup>*</sup></td>
-					<td class="stats__field">рублей <span>вложений</span></td>
+					<td class="stats__field">рублей<br> вложений</td>
 				</tr>
 
 				<tr>
 					<td class="stats__value">7 200</td>
-					<td class="stats__field">секунд <span>времени мастера</span></td>
+					<td class="stats__field">секунд <br>времени мастера</td>
 				</tr>
 
 				<tr>
 					<td class="stats__value">90 000</td>
-					<td class="stats__field">постриженных <span>волос</span></td>
+					<td class="stats__field">постриженных <br>волос</td>
 				</tr>
 
 				<tr>
 					<td class="stats__value">500 000 <sup>*</sup></td>
-					<td class="stats__field">лайков и <span>комплиментов</span></td>
+					<td class="stats__field">лайков и <br>комплиментов</td>
 				</tr>
 
 			</table>
-			<small class="stats__legend stats__legend--bottom"><sup>*</sup> - приведённые данные ложь</small>
+			<small class="stats__legend stats__legend--bottom"><sup>*</sup> — приведённые данные ложь</small>
 
 		</section>
 
@@ -120,7 +118,7 @@
 					</li>
 				</ul>
 				<div class="advantages__toggles slider__toggles">
-					<label for="advantages-input-1" class="advantages__toggle advantages__toggle--active">1</label>
+					<label for="advantages-input-1" class="advantages__toggle">1</label>
 					<label for="advantages-input-2" class="advantages__toggle">2</label>
 					<label for="advantages-input-3" class="advantages__toggle">3</label>
 				</div>
@@ -134,22 +132,16 @@
 				<h2 class="news__title">Новости и акции</h2>
 				<ul class="news__list">
 					<li class="news__item">
-						<a href="#" class="news__link">
-							<time class="news__date" datetime="2016-09-29"><b>29</b> <span>сент</span></time>
-							<p>Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
-						</a>
+						<time class="news__date" datetime="2016-09-29"><b>29</b> сент</time>
+						<p>Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
 					</li>
 					<li class="news__item">
-						<a href="#" class="news__link">
-							<time class="news__date" datetime="2016-09-19"><b>19</b> <span>сент</span></time>
-							<p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
-						</a>
+						<time class="news__date" datetime="2016-09-19"><b>19</b> сент</time>
+						<p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
 					</li>
 					<li class="news__item">
-						<a href="#" class="news__link">
-							<time class="news__date" datetime="2016-09-09"><b>9</b> <span>сент</span></time>
-							<p>Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
-						</a>
+						<time class="news__date" datetime="2016-09-09"><b>9</b> сент</time>
+						<p>Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
 					</li>
 				</ul>
 
@@ -171,7 +163,7 @@
 				<div class="reviews__list">
 					<blockquote class="reviews__item slider__item">
 						<div class="reviews__author-photo">
-							<img src="img/user-desc.jpg" alt="Фото Трэвиса Баркера">
+							<img src="img/user-desc.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
 						</div>
 						<cite class="reviews__author-name">Трэвис Баркер</cite>
 						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
@@ -179,18 +171,18 @@
 
 					<blockquote class="reviews__item slider__item">
 						<div class="reviews__author-photo">
-							<img src="img/user-desc.jpg" alt="Фото Трэвиса Баркера">
+							<img src="img/user-desc.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
 						</div>
 						<cite class="reviews__author-name">Трэвис Баркер</cite>
-						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+						<p>Спасибо за усы! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
 					</blockquote>
 
 					<blockquote class="reviews__item slider__item">
 						<div class="reviews__author-photo">
-							<img src="img/user-desc.jpg" alt="Фото Трэвиса Баркера">
+							<img src="img/user-desc.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
 						</div>
 						<cite class="reviews__author-name">Трэвис Баркер</cite>
-						<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+						<p>Спасибо за бороду! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
 					</blockquote>
 
 					<button class="reviews__prev" type="button">Предыдущий отзыв</button>
@@ -198,7 +190,7 @@
 				</div>
 
 				<div class="reviews__toggles slider__toggles">
-					<label for="reviews-input-1" class="reviews__toggle reviews__toggle--active">1</label>
+					<label for="reviews-input-1" class="reviews__toggle">1</label>
 					<label for="reviews-input-2" class="reviews__toggle">2</label>
 					<label for="reviews-input-3" class="reviews__toggle">3</label>
 				</div>
@@ -216,6 +208,7 @@
 				</p>
 
 				<p class="page-footer__social">
+					<b>Давайте дружить!</b>
 					<span class="social-links">
 						<a href="#" class="social-link social-link--vk">Мы в Вконтакте</a>
 						<a href="#" class="social-link social-link--fb">Мы в Фейсбуке</a>
@@ -230,5 +223,30 @@
 			</div>
 
 		</footer>
+
+		<div class="modal-login">
+			<b class="modal-login__title">ЛИЧНЫЙ КАБИНЕТ</b>
+			<p>Введите свой логин и пароль, чтобы войти</p>
+
+			<form action="#" class="modal-login-form" method="post">
+				<input type="text" name="login" class="modal-login-form__input modal-login-form__input--login" placeholder="Логин">
+				<input type="password" name="pass" class="modal-login-form__input modal-login-form__input--password" placeholder="Пароль">
+
+				<div class="modal-login-form__row">
+					<input type="checkbox" name="remember" id="remember" class="modal-login-form__checkbox">
+					<label for="remember" class="modal-login-form__label">Запомните меня</label>
+
+					<a href="#" class="modal-login-form__link">Я забыл пароль!</a>
+				</div>
+
+				<div class="modal-login-form__btns">
+					<button type="submit" class="btn btn__login">Войти<span class="btn__cabinet"> в личный кабинет</span></button>
+					<button type="button" class="btn btn__close"> Закрыть</button>
+				</div>
+
+			</form>
+		</div>
+
+		<script src="js/common.js"></script>
 	</body>
 </html>
