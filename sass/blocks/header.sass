@@ -171,13 +171,15 @@
 			order: 2
 			width: 100%
 			height: 400px
+			padding-top: 30px
 			background: #000 url(../img/bg.jpg) no-repeat center
+			&--inner
+				height: 215px
 			@media #{$retina}
 				background-image: url(../img/bg@2x.jpg)
 				background-size: 1338px auto
 			img
 				position: absolute
-				bottom: 257px
 				left: 50%
 				width: 370px
 				height: auto
@@ -261,7 +263,8 @@
 			// background-image: url(../img/bg-desc.jpg)
 			background-size: cover
 			img
-				bottom: 438px
+			&--inner
+				height: 300px
 
 	.main-nav
 		&__list
